@@ -1,0 +1,24 @@
+.banner {
+    margin : 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bannerLinks a {
+    margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .banner img {
+        width: 30%;
+        min-width: 80px;
+        min-height: 25px;
+    }
+}
+
+@media only screen and (max-width: 300x) {
+    .bannerLinks a  {
+        font-size: 12px;
+    }
+}

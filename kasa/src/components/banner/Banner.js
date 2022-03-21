@@ -1,12 +1,18 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './Banner.css';
 
 function Banner() {
     return (
-    <nav>
-      <Link to="/"> Accueil</Link>
+    <nav className='banner'>
+      <img src={require('../../LOGO.png')} alt="Logo" />
+
+      <div className='bannerLinks'>
+        <Link to="/"> Accueil</Link>
       <Link to="/about"> A propos</Link>
-        <h1>Kasa</h1>
+      </div>
+      
+        
     </nav>
     );
     
