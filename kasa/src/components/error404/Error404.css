@@ -1,0 +1,66 @@
+.error404{
+   display: flex;
+    flex-direction: column; 
+}
+
+.error404 h1{
+    font-size: 288px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 411px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.error404 h3{
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.error404 a{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .error404 h1{
+font-size: 96px;
+font-style: normal;
+font-weight: 700;
+line-height: 137px;
+letter-spacing: 0em;
+text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .error404 h3{
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: center;
+
+    }
+    
+    .error404 a{
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 0em;
+
+        text-align: center;
+    }
+}
