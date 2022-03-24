@@ -22,6 +22,13 @@ export default function Home() {
     // si on a recuperer les données
     if(data != null) {
         return (
+          <section className="homeSection">
+            <div className="homeImg"> 
+              <div className="blackLayer">
+                <h1> Chez vous, partout et ailleurs </h1> 
+              </div>
+              
+            </div>
             <div className="locations">
                 {data.map( data =>{
                     return (
@@ -31,6 +38,7 @@ export default function Home() {
                   }
                 )}
             </div>
+            </section>
         );
     } 
     // sinon on affiche un message de chargement
