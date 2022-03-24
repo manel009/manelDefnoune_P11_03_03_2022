@@ -5,11 +5,13 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 
 @media only screen and (max-width: 600px) {
     footer{
         font-size: 10px;
+        height: 100px;
     }
 }
