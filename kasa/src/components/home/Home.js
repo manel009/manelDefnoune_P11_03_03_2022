@@ -13,7 +13,9 @@ export default function Home() {
     fetch("./data.json").then( res => {
         return res.json()
       }).then(data => {
-        setData(data)
+        setData(data);
+        // stock les donnees dans le localstorage
+        localStorage.setItem('locationsData', JSON.stringify(data));
       }).catch(err => {
           console.log(err, ' error')
         }
