@@ -10,13 +10,15 @@ import Location from "./location/Location";
 function App() {
   return (
     <div className="content">
-          <Banner />
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/about" element={<About />}/>
-      <Route path="/location/:idLoc" element={<Location />}/>
-      <Route path="*" element={<Error404 />} />
-    </Routes>
+      <Banner />
+      <div className="main-content">
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/location/:idLoc" element={<Location />}/>
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+    </div>
     <Footer />
     </div>
       

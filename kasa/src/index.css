@@ -23,6 +23,12 @@ a:link, a:visited, a:hover,  a:active {
   color:#FF6060; 
 }
 
-.banneImage{
-  border-radius: 10px;
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-content{
+  min-height: 72vh;
 }
