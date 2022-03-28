@@ -3,7 +3,7 @@ import './Collapse.css';
 
 export default function Collapse(props){
 
-    const [isOpen , setIsOpen]=useState(true)
+    const [isOpen , setIsOpen]=useState(false)
 
     const handleOpenCollapse = () => {
         setIsOpen(!isOpen);
@@ -19,7 +19,16 @@ export default function Collapse(props){
                 
             
             <div className={isOpen ? "contentCollapseOpen" : "contentCollapseClose"}>
-                <p>{props.content}</p>
+            
+                
+                { props.content instanceof Array ? 
+                    props.content.map( contentline => {
+                        return <p> {contentline} </p>;
+                    }) 
+                    : <p>{props.content}</p> 
+                }
+                    
+
             </div>
         </div>
     );

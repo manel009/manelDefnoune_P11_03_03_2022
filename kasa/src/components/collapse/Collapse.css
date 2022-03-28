@@ -27,6 +27,7 @@
 
   .contentCollapseClose {
     display: none;
+    width: 100%;
   }
 
   .contentCollapseOpen {
