@@ -31,23 +31,6 @@ export default function Gallery(props){
         }
     }
 
-
-    /*
-    // si on etait a la derniere slide et qu'on souhaite afficher la suivante, on repart a la premiere slide
-    if (n > slides.length - 1) {
-        slideIndex = 0;
-    }
-    // si on etait a la premiere slide et qu'on souhaite affichier la precedente, on affiche la derniere
-    else if (n < 0) {
-        slideIndex = slides.length - 1;
-    }
-    // Sinon on affiche la slide a la position demandée
-    else {
-        slideIndex = n;
-    }
-    slides[slideIndex].style.display = "flex";
-    */
-
     return (
         <div className="gallery">
             { props.pictures.length > 1 ? 

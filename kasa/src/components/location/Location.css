@@ -9,7 +9,8 @@
 
 .locationGallery{
     margin-bottom: 10px;
-    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
 }
 
 .locationInformations {
@@ -18,12 +19,51 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 10px;
 }
 
 .locationTitleAndLocation{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.locationTitleAndLocation p{
+    margin-top: 10px;
+}
+
+.locationTags{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.locationTag{
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    background-color: #FF6060; 
+    color: white;
+}
+
+
+
+.locationHostAndStars{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+@media only screen and (max-width: 800px) { 
+    .locationHostAndStars{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
 }
 
 .locationHost{
@@ -49,14 +89,6 @@
 
 }
 
-.locationTagAndStars{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
 .locationStars{
     font-size: 18px;
 }
@@ -69,27 +101,25 @@
     color: gray;
   }
 
-.locationTags{
-    display: flex;
-    flex-direction: row;
-}
-
-.locationTag{
-    padding: 5px 10px;
-    margin-right: 5px;
-    border-radius: 10px;
-    font-size: 12px;
-    background-color: #FF6060; 
-    color: white;
-}
-
 .locationDescAndEquipements{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     min-width: 100%;
+    margin-bottom: 50px;
 }
 
 .locationCollapse{
     width: 45%;
+}
+
+@media only screen and (max-width: 800px) { 
+    .locationDescAndEquipements{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .locationCollapse{
+        width: 100%;
+    }
 }

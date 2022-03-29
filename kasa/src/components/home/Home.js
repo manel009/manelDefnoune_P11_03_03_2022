@@ -35,7 +35,11 @@ export default function Home() {
                 {data.map( data =>{
                     return (
                     <div className="location"> 
-                        <Link to={`location/${data.id}`}>{data.title}</Link>
+                        <img src={data.cover} alt="cover"></img>
+                        <div className="locationLink">
+                          <Link to={`location/${data.id}`}>{data.title}</Link>
+                        </div>
+                        
                     </div>)
                   }
                 )}

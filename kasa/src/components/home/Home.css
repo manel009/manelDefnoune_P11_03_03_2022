@@ -19,15 +19,36 @@
 }
 
 .location{
+    position: relative;
     width: 340px;
     height: 340px;
     padding: 5px;
-    background: #FF6060; 
+    /*background: #FF6060; */
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.location img{
+   height: 340px;
+   object-fit: cover;
+   position: relative;
+}
+
+.locationLink{
+    width: 100%;
+    height: 340px;
+    position: absolute;
+    top : 0;
+    left: 0;
+    box-shadow: rgb(0 0 0 / 35%) 0px -180px 50px -50px inset;
 }
 
 .location a{
     color: white;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px;
 }
 
 .homeImg{
@@ -55,4 +76,13 @@
 
 .homeImg h1{
     color: white;
+}
+
+@media only screen and (max-width: 600px) { 
+    .homeSection{
+        width: 100%;
+    }
+    .homeImg h1{
+        font-size: 18px;
+    }
 }

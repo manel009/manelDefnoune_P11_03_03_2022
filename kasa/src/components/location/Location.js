@@ -27,25 +27,28 @@ export default function Location(){
             <div className="locationInformations">
                 <div className="locationTitleAndLocation">
                     <h1>{locationSelected.title}</h1>
-                    {locationSelected.location}
+                    <p> {locationSelected.location}</p>
+
+                    <div className="locationTags">
+                        {locationSelected.tags.map( tag => {
+                            return <span className="locationTag">{tag}</span>
+                        })}
+                    </div>
+
                 </div>
-                <div className="locationHost">
-                    <p className="locationHostName">{locationSelected.host.name}</p>
-                    <img src={locationSelected.host.picture} alt="profil loueur" className="hostPicture"></img>
+
+                <div className="locationHostAndStars">
+                    <div className="locationHost">
+                        <p className="locationHostName">{locationSelected.host.name}</p>
+                        <img src={locationSelected.host.picture} alt="profil loueur" className="hostPicture"></img>
+                        
+                    </div>
+                    <div className="locationStars">
+                            {stars}
+                        </div>
                 </div>
                 
-            </div>
-            <div className="locationTagAndStars">
-                <div className="locationTags">
-                    {locationSelected.tags.map( tag => {
-                        return <span className="locationTag">{tag}</span>
-                    })}
-                </div>
-
-                <div className="locationStars">
-                    {stars}
-                </div>
-
+                
             </div>
             <div className="locationDescAndEquipements">
                 <div className="locationCollapse">
