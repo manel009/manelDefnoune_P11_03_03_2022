@@ -9,6 +9,7 @@
 
 .locationGallery{
     margin-bottom: 10px;
+    min-width: 100%;
 }
 
 .locationInformations {

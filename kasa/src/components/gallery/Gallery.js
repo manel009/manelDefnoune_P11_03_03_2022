@@ -3,24 +3,30 @@ import './Gallery.css';
 
 export default function Gallery(props){
 
-    const [isOpen , setIsOpen]=useState(false)
+    const [positionToDisplay , setPositionToDisplay]=useState(0);
 
-    const handleOpenCollapse = () => {
-        setIsOpen(!isOpen);
+    
+    const handlePrevious = () => {
+        setPositionToDisplay(positionToDisplay-1);
     }
 
-    // 3 on va gerer les event
-    // 4 css
+    const handleNext = () => {
+        setPositionToDisplay(positionToDisplay+1);
+    }
+    
+   let imageToDisplay;
+    // on masque toutes les images sauf celle à la position "positionToDisplay"
+    for (var i = 0; i < props.pictures.length; i++) {
+        if(i === positionToDisplay){
+            imageToDisplay = <img src={props.pictures[i]} alt="presentation location" className="imageGallery"></img>
+        }
+    }
 
     return (
         <div className="gallery">
-            {
-                props.pictures.map(
-                    pictureUrl => {
-                        return <img src={pictureUrl} alt="presentation location" className="imageGallery"></img>
-                    }
-                )
-            }
+            { positionToDisplay !== 0 ? <p id="prev" class="prev" onClick={handlePrevious} aria-label="Previous image">&#10094;</p> : ""}
+            { positionToDisplay !== props.pictures.length-1 ? <p id="next" class="next" onClick={handleNext} aria-label="Next image">&#10095;</p>: ""}
+            {imageToDisplay}
         </div>
     );
 }
