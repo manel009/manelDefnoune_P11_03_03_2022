@@ -10,20 +10,26 @@ export default function Location(){
 
     return (
         <section className="locationSection">
-            <div > caroussel : {locationSelected.pictures} </div>
+            <div className="locationGallery"> 
+                gallery : {locationSelected.pictures} 
+            </div>
             <div className="locationInformations">
                 <div className="locationTitleAndLocation">
                     <h1>{locationSelected.title}</h1>
                     {locationSelected.location}
                 </div>
                 <div className="locationHost">
-                    {locationSelected.host.name}
-                    <img src={locationSelected.host.picture} alt="profil loueur"></img>
+                    <p className="locationHostName">{locationSelected.host.name}</p>
+                    <img src={locationSelected.host.picture} alt="profil loueur" className="hostPicture"></img>
                 </div>
                 
             </div>
             <div className="locationTagAndStars">
-                <span>{locationSelected.tags}</span>
+                <div className="locationTags">
+                    {locationSelected.tags.map( tag => {
+                        return <span className="locationTag">{tag}</span>
+                    })}
+                </div>
                 <span>{locationSelected.rating}</span>
             </div>
             <div className="locationDescAndEquipements">

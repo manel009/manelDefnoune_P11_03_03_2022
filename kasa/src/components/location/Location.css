@@ -7,11 +7,17 @@
     align-items: center;
 }
 
+.locationGallery{
+    margin-bottom: 10px;
+}
+
 .locationInformations {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .locationTitleAndLocation{
@@ -19,11 +25,49 @@
     flex-direction: column;
 }
 
+.locationHost{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.locationHostName{
+    max-width: 120px;
+    font-size: 20px;
+    word-spacing: 100px;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.hostPicture{
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 50%;
+
+}
+
 .locationTagAndStars{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.locationTags{
+    display: flex;
+    flex-direction: row;
+}
+
+.locationTag{
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    background-color: #FF6060; 
+    color: white;
 }
 
 .locationDescAndEquipements{
