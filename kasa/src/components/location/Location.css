@@ -56,6 +56,18 @@
     margin-bottom: 10px;
 }
 
+.locationStars{
+    font-size: 18px;
+}
+
+.locationStars i{
+    margin-left: 5px;
+}
+
+.unchecked {
+    color: gray;
+  }
+
 .locationTags{
     display: flex;
     flex-direction: row;

@@ -7,6 +7,16 @@ export default function Location(){
     const params = useParams();
     const locations = JSON.parse(localStorage.getItem('locationsData'));
     const locationSelected = locations.find(location => location.id === params.idLoc);
+    
+    let stars= [];
+    for (let i = 0; i < 5; i++) {
+        if(i<locationSelected.rating){
+            stars.push(<i class="fa fa-star"></i>);
+        } else {
+            stars.push(<i class="fa fa-star unchecked"></i>);
+        }
+        
+    }
 
     return (
         <section className="locationSection">
@@ -30,7 +40,11 @@ export default function Location(){
                         return <span className="locationTag">{tag}</span>
                     })}
                 </div>
-                <span>{locationSelected.rating}</span>
+
+                <div className="locationStars">
+                    {stars}
+                </div>
+
             </div>
             <div className="locationDescAndEquipements">
                 <div className="locationCollapse">
