@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Collapse from "../collapse/Collapse";
+import Gallery from "../gallery/Gallery";
 import './Location.css';
 
 export default function Location(){
@@ -21,7 +22,7 @@ export default function Location(){
     return (
         <section className="locationSection">
             <div className="locationGallery"> 
-                gallery : {locationSelected.pictures} 
+                <Gallery pictures={locationSelected.pictures} ></Gallery>
             </div>
             <div className="locationInformations">
                 <div className="locationTitleAndLocation">
