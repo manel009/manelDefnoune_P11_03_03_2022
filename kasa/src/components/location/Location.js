@@ -3,23 +3,27 @@ import { useParams } from "react-router-dom";
 import Collapse from "../collapse/Collapse";
 import Gallery from "../gallery/Gallery";
 import './Location.css';
+import Error404 from "../error404/Error404";
 
 export default function Location(){
     const params = useParams();
     const locations = JSON.parse(localStorage.getItem('locationsData'));
     const locationSelected = locations.find(location => location.id === params.idLoc);
-    
+    const isLocationFounded = locationSelected !== undefined;
     let stars= [];
+    if(isLocationFounded){
     for (let i = 0; i < 5; i++) {
         if(i<locationSelected.rating){
-            stars.push(<i class="fa fa-star"></i>);
+            stars.push(<i key={i} className="fa fa-star"></i>);
         } else {
-            stars.push(<i class="fa fa-star unchecked"></i>);
+            stars.push(<i key={i} className="fa fa-star unchecked"></i>);
         }
         
     }
-
-    return (
+}
+    return (<>
+        { isLocationFounded ?
+            
         <section className="locationSection">
             <div className="locationGallery"> 
                 <Gallery pictures={locationSelected.pictures} ></Gallery>
@@ -30,8 +34,8 @@ export default function Location(){
                     <p> {locationSelected.location}</p>
 
                     <div className="locationTags">
-                        {locationSelected.tags.map( tag => {
-                            return <span className="locationTag">{tag}</span>
+                        {locationSelected.tags.map(( tag,index) => {
+                            return <span key={index} className="locationTag">{tag}</span>
                         })}
                     </div>
 
@@ -58,7 +62,10 @@ export default function Location(){
                     <Collapse title="Equipements" content={locationSelected.equipments}/>
                 </div>
             </div>
-        </section>
         
+        </section>
+    
+        : <Error404></Error404>}
+        </>
     );
 }

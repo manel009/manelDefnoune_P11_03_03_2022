@@ -22,8 +22,8 @@ export default function Collapse(props){
             
                 
                 { props.content instanceof Array ? 
-                    props.content.map( contentline => {
-                        return <p> {contentline} </p>;
+                    props.content.map(( contentline,index) => {
+                        return <p key={index}> {contentline} </p>;
                     }) 
                     : <p>{props.content}</p> 
                 }
