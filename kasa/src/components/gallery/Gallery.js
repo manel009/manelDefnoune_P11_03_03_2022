@@ -35,8 +35,8 @@ export default function Gallery(props){
         <div className="gallery">
             { props.pictures.length > 1 ? 
                 <>
-                <p id="prev" class="prev" onClick={handlePrevious} aria-label="Previous image">&#10094;</p> 
-                <p id="next" class="next" onClick={handleNext} aria-label="Next image">&#10095;</p>
+                <p id="prev" className="prev" onClick={handlePrevious} aria-label="Previous image">&#10094;</p> 
+                <p id="next" className="next" onClick={handleNext} aria-label="Next image">&#10095;</p>
                 </>
                 : ""
             }
